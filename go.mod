@@ -1,4 +1,4 @@
-module github.com/michaelwp/go-watermark
+module github.com/michaelwp/goWatermark
 
 go 1.22.2
 

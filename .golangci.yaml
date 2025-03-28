@@ -1,0 +1,63 @@
+linters:
+  enable:
+    - errorlint       # Improves error handling
+    - gosec           # Detects security vulnerabilities
+    - gocritic        # Detects performance and style issues
+    - dupl            # Detects duplicate code
+    - cyclop          # Checks cyclomatic complexity
+    - funlen          # Prevents excessively long functions
+    - revive
+    - govet
+    - staticcheck
+    - gocyclo
+    - bodyclose
+    - ineffassign
+    - tagalign
+    - unconvert
+    - unparam
+    - unused
+
+run:
+  concurrency: 2
+  timeout: 5m
+  tests: true
+  allow-parallel-runners: true
+
+issues:
+  new: true
+  fix: true
+  exclude-use-default: false
+  exclude:
+    - "don't use underscores in Go names; func example_foo should be exampleFoo"
+
+linters-settings:
+  govet:
+    disable-all: true
+    enable:
+      - appends
+      - assign
+      - atomic
+      - bools
+      - findcall
+      - framepointer
+      - httpresponse
+      - ifaceassert
+      - loopclosure
+      - lostcancel
+      - nilfunc
+      - nilness
+      - printf
+      - reflectvaluecompare
+      - shift
+      - slog
+      - sortslice
+      - stdmethods
+      - stringintconv
+      - structtag
+      - testinggoroutine
+      - tests
+      - unmarshal
+      - unreachable
+      - unsafeptr
+      - unusedresult
+version: 2

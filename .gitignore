@@ -24,3 +24,5 @@ go.work.sum
 .idea
 .DS_Store
 *.swp
+
+output.jpeg
